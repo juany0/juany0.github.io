@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Secular+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Secular One", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(./SVGs/blob-scene-haikei.svg);
+  background-repeat: no-repeat;
+  max-width: 1920px;
+  max-height: 1080px;
+  min-width: 700px;
+}
+
+header {
+  height: 90px;
+  background: transparent;
+}
+
+.inner-width {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.logo {
+  float: left;
+  padding: 20px auto;
+  font-size: 60px;
+  color: #ddd;
+}
+
+.navigation-menu {
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a {
+  margin-left: 50px;
+  padding: 5px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 22px;
+  border-radius: 4px;
+  transition: 0.3s linear;
+}
+
+.navigation-menu a:hover {
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.menu-toggle-btn {
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #ddd;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+.res-main-title {
+  display: none;
+  font-size: 6em;
+  font-weight: bold;
+  color: #ddd;
+  text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 760px) {
+  .menu-toggle-btn {
+    display: block !important;
+  }
+
+  .navigation-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(to left, #1c161c, #3d373c);
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+  }
+
+  .navigation-menu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ddd;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation-menu.active {
+    display: block;
+  }
+
+  .main-title {
+    display: none;
+  }
+
+  .main-sub {
+    padding-left: 10px;
+  }
+  .res-main-title {
+    display: block;
+  }
+}
+
+/* HOME PAGE */
+
+.home-page {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-page2 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1c161c, #3d373c);
+}
+
+#sobre-mi {
+  text-align: center;
+  padding-top: 35px;
+}
+
+#proyectos {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.sob-desc {
+  width: 70vh;
+  height: 31vh;
+  background: #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
+  margin: auto;
+  margin-top: 80px;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.sob-desc p {
+  padding: 15px;
+  color: #1c161c;
+  text-align: center;
+}
+
+.home-page3 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./SVGs/wave-haikeixd.svg");
+}
+
+.error-empty {
+  color: #ddd;
+  text-align: center;
+  font-size: 33px;
+  padding-top: 80px;
+  letter-spacing: 4px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+h1 {
+  display: block;
+  font-size: 6em;
+  font-weight: bold;
+  color: #ddd;
+  text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-sub {
+  display: block;
+  font-size: 3em;
+  color: #ddd;
+}
+
+#btnScrollToTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+#btnScrollToTop:active {
+  background: #000;
+  color: #ddd;
+}

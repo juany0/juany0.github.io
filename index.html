@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"
+      integrity="sha512-NhRZzPdzMOMf005Xmd4JonwPftz4Pe99mRVcFeRDcdCtfjv46zPIi/7ZKScbpHD/V0HB1Eb+ZWigMqw94VUVaw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Fuica</title>
+  </head>
+  <body>
+    <button id="btnScrollToTop">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+    <header>
+      <div class="inner-width">
+        <a href="#" class="logo">JFd</a>
+        <i class="menu-toggle-btn fa-solid fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="#sobre-mi">Sobre Mi</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="https://discord.gg/htbpSfVH6c" target="_blank">Discord</a>
+        </nav>
+      </div>
+    </header>
+    <div class="home-page">
+      <div class="title-container">
+        <h1 class="main-title">Juan Fuica</h1>
+        <h1 class="res-main-title">JF</h1>
+        <div class="main-sub" id="text"></div>
+      </div>
+    </div>
+    <div class="home-page2">
+      <h1 class="main-title2" id="sobre-mi">Sobre Mi</h1>
+      <div class="sob-desc">
+        <p>
+          Actualmente me encuentro estudiando la carrera de Gestión Humana y
+          Relaciones laborales perteneciente a la facultad de economía y
+          finanzas en la universidad católica. Me encuentro cursando el tercer
+          año de dicha carrera y durante este tiempo me fue posible adquirir
+          conocimientos invaluables sobre las áreas de RR.HH, Marketing,
+          contabilidad, entre otras; Aunque eso no es todo, por medio de
+          materias optativas y distintos cursos también pude obtener
+          conocimientos de otras áreas como lo son el análisis de datos por
+          medio del lenguaje de programación R, desarrollo de algoritmos y
+          aplicaciones utilizando Python o Web Development con HTML, CSS y
+          Javascript. Nací y viví toda mi vida en Uruguay pero siempre he tenido
+          una educación bilingue, además cuento con diversos exámenes
+          internacionales aprobados por la Universidad de Cambridge que me
+          permiten decir que cuento con un nivel de inglés avanzado.
+        </p>
+      </div>
+    </div>
+    <div class="home-page3">
+      <h1 class="main-title3" id="proyectos">Proyectos</h1>
+      <h3 class="error-empty">*THIS PAGE IS CURRENTLY EMPTY :(*</h3>
+    </div>
+    <!-- --------------------------------------- SCRIPT ---------------------------------------- -->
+    <script type="text/javascript">
+      $(".menu-toggle-btn").click(function () {
+        $(".navigation-menu").toggleClass("active");
+      });
+
+      $(".navigation-menu a").on("click", function () {
+        $(".navigation-menu").toggleClass("active");
+      });
+
+      var i = 0,
+        text;
+      text = "Front End \n Developer...";
+
+      function typing() {
+        if (i < text.length) {
+          document.getElementById("text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing, 60);
+        }
+      }
+      typing();
+
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+      btnScrollToTop.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </body>
+</html>
